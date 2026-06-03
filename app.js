@@ -10,3 +10,7 @@ function voteNo() {
   noVotes++;
   document.getElementById("no").innerText = noVotes;
 }
+function connectWallet() {
+  document.getElementById("wallet").innerText =
+    "Wallet Connected: 0xCisse1234";
+}
