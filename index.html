@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cisse DAO Voting</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Cisse DAO Voting</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Cisse DAO Voting</h1>
-    <p>A decentralized voting platform.</p>
 
-    <script src="app.js"></script>
+  <div class="container">
+    <h1>Cisse DAO Voting</h1>
+
+    <div class="proposal">
+      <h2>Proposal</h2>
+      <p>Launch Cisse DAO Treasury</p>
+    </div>
+
+    <button onclick="voteYes()">Vote YES</button>
+    <button onclick="voteNo()">Vote NO</button>
+
+    <h3>Results</h3>
+    <p>YES Votes: <span id="yes">0</span></p>
+    <p>NO Votes: <span id="no">0</span></p>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
