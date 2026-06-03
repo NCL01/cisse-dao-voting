@@ -1,16 +1,18 @@
-let yesVotes = 0;
-let noVotes = 0;
+async function connectWallet() {
+  if (window.ethereum) {
+    try {
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
 
-function voteYes() {
-  yesVotes++;
-  document.getElementById("yes").innerText = yesVotes;
-}
+      const account = accounts[0];
 
-function voteNo() {
-  noVotes++;
-  document.getElementById("no").innerText = noVotes;
-}
-function connectWallet() {
-  document.getElementById("wallet").innerText =
-    "Wallet Connected: 0xCisse1234";
+      document.getElementById("wallet").innerText =
+        "Wallet Connected: " + account;
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    alert("MetaMask not detected. Please install MetaMask.");
+  }
 }
